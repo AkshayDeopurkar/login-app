@@ -22,6 +22,13 @@ const Login = (props) => {
 
         props.onData(data);
     }
+    const onBackHandler = () => {
+        let data = {
+            register : false,
+            login : false
+        }
+        props.onBack(data);
+    }
     return(
         <div>
             <form onSubmit={submitHandler}>
@@ -29,7 +36,8 @@ const Login = (props) => {
               <input type="email" onChange={usernameChangeHandler} value={inputUsername}/><p />
               <label>Password: </label>
               <input type="password" onChange={passwordChangeHandler} value={inputPassword}/><p />
-              <button type="submit" >Submit</button>  
+              <button type="submit" >Submit</button><br />
+                <button type="button" onClick={onBackHandler}>Back</button>
             </form>
         </div>
     );

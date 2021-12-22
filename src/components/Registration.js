@@ -28,6 +28,13 @@ const Registration = (props) => {
 
         props.onData(data);
     }
+    const onBackHandler = () => {
+        let data = {
+            register : false,
+            login : false
+        }
+        props.onBack(data);
+    }
     return(
         <div>
             <form onSubmit={submitHandler}>
@@ -37,7 +44,8 @@ const Registration = (props) => {
                 <input type="password" onChange={passwordChangeHandler} value={inputPassword} /><p />
                 <label>Confirm Password: </label>
                 <input type="password" onChange={cPasswordChangeHandler} value={inputCPassword}/><p />
-                <button type="submit">Submit</button>
+                <button type="submit">Submit</button><br />
+                <button type="button" onClick={onBackHandler}>Back</button>
             </form>
         </div>
     );

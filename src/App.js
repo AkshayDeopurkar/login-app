@@ -15,6 +15,10 @@ function App() {
     console.log(homeData);
     // console.log(showRegister+" "+showLogin);
   }
+  const backHandler = (backData) => {
+    setShowRegister(backData.register);
+    setShowLogin(backData.login);
+  }
 
   const registrationDataHandler = (registrationData) => {
     console.log(registrationData);
@@ -34,7 +38,7 @@ function App() {
     return (
       <div className="App">
           <h2><u>Registration</u></h2>
-          <Registration onData={registrationDataHandler}/>
+          <Registration onData={registrationDataHandler} onBack={backHandler}/>
       </div>
     );
   }
@@ -42,7 +46,7 @@ function App() {
     return (
       <div className="App">
           <h2>Login</h2>
-          <Login onData={loginDataHandler}/>
+          <Login onData={loginDataHandler} onBack={backHandler}/>
       </div>
     );
   }
