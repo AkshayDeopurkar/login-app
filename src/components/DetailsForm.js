@@ -54,7 +54,7 @@ const DetailsForm = (props) => {
             Python : inputPython
         }
         setInputLanguage(data);
-        console.log(data);
+        // console.log(data);
     }
     const htmlChangeHandler = (event) => {
         toggleInputHTML(event.target.checked);
@@ -67,7 +67,7 @@ const DetailsForm = (props) => {
             Python : inputPython
         }
         setInputLanguage(data);
-        console.log(data);
+        // console.log(data);
     }
     const pythonChangeHandler = (event) => {
         toggleInputPython(event.target.checked);
@@ -80,7 +80,7 @@ const DetailsForm = (props) => {
             Python : event.target.checked
         }
         setInputLanguage(data);
-        console.log(data);
+        // console.log(data);
     }
     const submitHandler = (event) => {
         event.preventDefault();
